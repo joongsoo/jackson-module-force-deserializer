@@ -30,6 +30,6 @@ This code is serialized as this string.
 }
 ```
 
-But jackson is not deserialize. because not matched between parameter name in constructor and field name.
+But jackson is not deserialize. because jackson is using default constructor for create instance. (or `@JsonCreator`)
 
 If using this module, possible to serialize this class. because this module is created object using objenesis. so create object by-passing Object initialization.
