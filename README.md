@@ -33,3 +33,12 @@ This code is serialized as this string.
 But jackson is not deserialize. because jackson is using default constructor for create instance. (or `@JsonCreator`)
 
 If using this module, possible to serialize this class. because this module is created object using objenesis. so create object by-passing Object initialization.
+
+
+## How to use
+It is very simple. register module to `ObjectMapper` class.
+
+```java
+ObjectMapper objectMapper = new ObjectMapper()
+    .registerModule(new ForceCreatorModule());
+```
