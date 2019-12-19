@@ -1,5 +1,4 @@
 # jackson-module-force-creator
-## Summary
 This module is born [jackson-databind#2570](https://github.com/FasterXML/jackson-databind/issues/2570)
 
 If implements serialize/deserialize using jackson, developers should be careful about the data consistency of serialization and deserialization.
@@ -36,6 +35,22 @@ If using this module, possible to serialize this class. because this module is c
 
 
 ## How to use
+### Add dependency
+#### Maven
+```xml
+<dependency>
+    <groupId>software.fitz</groupId>
+    <artifactId>jackson-module-force-creator</artifactId>
+    <version>0.1.0-RELEASE</version>
+</dependency>
+```
+
+#### Gradle
+```groovy
+compile group: 'software.fitz', name: 'jackson-module-force-creator', version: '0.1.0-RELEASE'
+```
+
+#### Apply module
 It is very simple. register module to `ObjectMapper` class.
 
 ```java
