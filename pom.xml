@@ -11,12 +11,12 @@
   </parent>
 
   <groupId>software.fitz</groupId>
-  <artifactId>jackson-module-force-creator</artifactId>
+  <artifactId>jackson-module-force-deserializer</artifactId>
   <version>0.1.0-RELEASE</version>
 
-  <name>jackson-module-force-creator</name>
+  <name>jackson-module-force-deserializer</name>
   <description>A module of Jackson for support more type in deserialization.</description>
-  <url>https://github.com/joongsoo/jackson-module-force-creator</url>
+  <url>https://github.com/joongsoo/jackson-module-force-deserializer</url>
 
   <licenses>
     <license>
