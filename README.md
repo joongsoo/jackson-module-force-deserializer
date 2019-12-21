@@ -1,4 +1,4 @@
-# jackson-module-force-creator
+# jackson-module-force-deserializer
 This module is born [jackson-databind#2570](https://github.com/FasterXML/jackson-databind/issues/2570)
 
 This module is support deserialize all possible types by force create. it is possible to deserialize many types that could not be deserialized in existing modules.
@@ -40,14 +40,14 @@ It is inject value through field, setter after force creation. so possible to su
 ```xml
 <dependency>
     <groupId>software.fitz</groupId>
-    <artifactId>jackson-module-force-creator</artifactId>
+    <artifactId>jackson-module-force-deserializer</artifactId>
     <version>0.1.0-RELEASE</version>
 </dependency>
 ```
 
 #### Gradle
 ```groovy
-compile group: 'software.fitz', name: 'jackson-module-force-creator', version: '0.1.0-RELEASE'
+compile group: 'software.fitz', name: 'jackson-module-force-deserializer', version: '0.1.0-RELEASE'
 ```
 
 #### Register module
@@ -55,5 +55,5 @@ It is very simple. register module to `ObjectMapper` class.
 
 ```java
 ObjectMapper objectMapper = new ObjectMapper()
-    .registerModule(new ForceCreatorModule());
+    .registerModule(new ForceDeserializerModule());
 ```

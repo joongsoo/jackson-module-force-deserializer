@@ -1,4 +1,4 @@
-package software.fitz.jackson.module.creator;
+package software.fitz.jackson.module.force;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
@@ -6,10 +6,10 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
  * @author Joongsoo.Park (https://github.com/joongsoo)
  * @since 2019-12-19
  */
-public class ForceCreatorModule extends SimpleModule {
+public class ForceDeserializerModule extends SimpleModule {
     @Override
     public String getModuleName() {
-        return "ForceCreatorModule";
+        return "ForceDeserializerModule";
     }
 
     @Override
