@@ -2,9 +2,12 @@ package software.fitz.jackson.module.force;
 
 import com.fasterxml.jackson.databind.BeanDescription;
 import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.deser.BeanDeserializerBuilder;
 import com.fasterxml.jackson.databind.deser.BeanDeserializerModifier;
 import com.fasterxml.jackson.databind.deser.ValueInstantiator;
+import com.fasterxml.jackson.databind.deser.std.MapDeserializer;
+import com.fasterxml.jackson.databind.type.MapType;
 
 /**
  * @author Joongsoo.Park (https://github.com/joongsoo)
@@ -35,6 +38,11 @@ class ForceCreatorBeanDeserializerModifier extends BeanDeserializerModifier {
         }
 
         return builder;
+    }
+
+    @Override
+    public JsonDeserializer<?> modifyMapDeserializer(DeserializationConfig config, MapType type, BeanDescription beanDesc, JsonDeserializer<?> deserializer) {
+        return new ForceMapDeserializer((MapDeserializer) deserializer);
     }
 
     private static boolean isNotPossibleInstantiation(ValueInstantiator valueInstantiator) {

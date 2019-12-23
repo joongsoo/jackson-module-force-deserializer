@@ -12,7 +12,7 @@
 
   <groupId>software.fitz</groupId>
   <artifactId>jackson-module-force-deserializer</artifactId>
-  <version>0.1.0-RELEASE</version>
+  <version>0.2.0-RELEASE</version>
 
   <name>jackson-module-force-deserializer</name>
   <description>A module of Jackson for support more type in deserialization.</description>
@@ -47,6 +47,13 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>2.2.2.RELEASE</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
