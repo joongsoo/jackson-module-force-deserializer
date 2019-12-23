@@ -41,13 +41,13 @@ It is inject value through field, setter after force creation. so possible to su
 <dependency>
     <groupId>software.fitz</groupId>
     <artifactId>jackson-module-force-deserializer</artifactId>
-    <version>0.1.0-RELEASE</version>
+    <version>0.2.0-RELEASE</version>
 </dependency>
 ```
 
 #### Gradle
 ```groovy
-compile group: 'software.fitz', name: 'jackson-module-force-deserializer', version: '0.1.0-RELEASE'
+compile group: 'software.fitz', name: 'jackson-module-force-deserializer', version: '0.2.0-RELEASE'
 ```
 
 #### Register module
